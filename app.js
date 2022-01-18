@@ -10,7 +10,9 @@ const usersRouter = require('./components/home/index');
 const userDetailRouter = require('./components/userDetail/index');
 const indexRouter = require('./components/auth/authRouter');
 const CustomerListRouter = require('./components/CustomerList/index');
+const CustomerLockListRouter = require('./components/CustomerLockList/index');
 const CustomerDetailRouter = require('./components/CustomerDetail/index');
+const CustomerLockDetailRouter = require('./components/CustomerLockDetail/index');
 const ProductListRouter = require('./components/ProductList/index');
 const productDetailRouter = require('./components/productDetail/index');
 const loginRouter = require('./components/auth/authRouter');
@@ -47,8 +49,8 @@ app.use('/index', indexRouter);
 app.use('/users', usersRouter);
 app.use('/productDetail', productDetailRouter);
 app.use('/CustomerDetail', CustomerDetailRouter);
-
-
+app.use('/CustomerLockDetail', CustomerLockDetailRouter);
+app.use('/CustomerLockList', CustomerLockListRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
